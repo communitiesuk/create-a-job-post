@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block pageScripts %}
+<script type="text/javascript" src="assets/js/accessible-autocomplete.min.js"></script>
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="vacancy-manager-details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          How do you want to assess candidates?
+        </h1>
+      </legend>
+      <span id="location-hint" class="govuk-hint">
+        You'll assess candidates against your selection during sift and interview.
+      </span>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="location" name="location" type="checkbox" value="London">
+          <label class="govuk-label govuk-checkboxes__label" for="location">
+            Technical
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="location-2" name="location" type="checkbox" value="Birkenhead">
+          <label class="govuk-label govuk-checkboxes__label" for="location-2">
+            Ability
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="location-3" name="location" type="checkbox" value="Birmingham">
+          <label class="govuk-label govuk-checkboxes__label" for="location-3">
+            Behaviours
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="location-4" name="location" type="checkbox" value="Bristol">
+          <label class="govuk-label govuk-checkboxes__label" for="location-4">
+          Strengths
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="location-5" name="location" type="checkbox" value="Cambridge">
+          <label class="govuk-label govuk-checkboxes__label" for="location-5">
+            Experience
+          </label>
+        </div>
+
+    </fieldset>
+  </div>
+
+<form class="form" action="assessing-candidates-2" method="post">
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
